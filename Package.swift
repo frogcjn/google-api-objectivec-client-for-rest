@@ -1133,10 +1133,10 @@ let package = Package(
               .process("Resources/PrivacyInfo.xcprivacy")
             ],
             publicHeadersPath: "Public",
-            swiftSettings: [
+            cSettings: [
                 .define("GTLR_SKIP_PAGES_WARNING")
             ],
-            cSettings: [
+            swiftSettings: [
                 .define("GTLR_SKIP_PAGES_WARNING")
             ]
         ),
