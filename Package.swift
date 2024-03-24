@@ -1132,7 +1132,10 @@ let package = Package(
             resources: [
               .process("Resources/PrivacyInfo.xcprivacy")
             ],
-            publicHeadersPath: "Public"
+            publicHeadersPath: "Public",
+            swiftSettings: [
+                .define("GTLR_SKIP_PAGES_WARNING")
+            ]
         ),
         .testTarget(
             name: "GoogleAPIClientForRESTTests",
@@ -2109,10 +2112,7 @@ let package = Package(
             name: "GoogleAPIClientForREST_Gmail",
             dependencies: ["GoogleAPIClientForRESTCore"],
             path: "Sources/GeneratedServices/Gmail",
-            publicHeadersPath: "Public",
-            swiftSettings: [
-                .define("GTLR_SKIP_PAGES_WARNING")
-            ]
+            publicHeadersPath: "Public"
         ),
         .target(
             name: "GoogleAPIClientForREST_GoogleAnalyticsAdmin",
