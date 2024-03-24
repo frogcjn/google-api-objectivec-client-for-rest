@@ -2109,7 +2109,10 @@ let package = Package(
             name: "GoogleAPIClientForREST_Gmail",
             dependencies: ["GoogleAPIClientForRESTCore"],
             path: "Sources/GeneratedServices/Gmail",
-            publicHeadersPath: "Public"
+            publicHeadersPath: "Public",
+            swiftSettings: [
+                .define("GTLR_SKIP_PAGES_WARNING")
+            ]
         ),
         .target(
             name: "GoogleAPIClientForREST_GoogleAnalyticsAdmin",
