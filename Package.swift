@@ -1135,6 +1135,9 @@ let package = Package(
             publicHeadersPath: "Public",
             swiftSettings: [
                 .define("GTLR_SKIP_PAGES_WARNING")
+            ],
+            cSettings: [
+                .define("GTLR_SKIP_PAGES_WARNING")
             ]
         ),
         .testTarget(
